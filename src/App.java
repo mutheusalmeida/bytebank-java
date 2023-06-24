@@ -8,7 +8,12 @@ public class App {
         System.out.println(client.accountBalance);
         
         client.deposit(100);
-        
+
         System.out.println(client.accountBalance);
+
+        boolean isWithdrawSuccess = client.withdraw(50);
+
+        System.out.println(client.accountBalance);
+        System.out.println(isWithdrawSuccess);
     }
 }

@@ -4,7 +4,17 @@ public class Account {
   int branch;
   int checkDigit;
 
-  void deposit (double value) {
+  public void deposit (double value) {
     this.accountBalance += value;
+  }
+
+  public boolean withdraw (double value) {
+    if (this.accountBalance >= value) {
+      this.accountBalance  -= value;
+      
+      return true;
+    } else {
+      return false;
+    }
   }
 }
