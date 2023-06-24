@@ -3,4 +3,8 @@ public class Account {
   String accounHolder;
   int branch;
   int checkDigit;
+
+  void deposit (double value) {
+    this.accountBalance += value;
+  }
 }
