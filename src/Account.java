@@ -4,8 +4,10 @@ public class Account {
   int branch;
   int checkDigit;
 
-  public void deposit (double value) {
+  public boolean deposit (double value) {
     this.accountBalance += value;
+
+    return true;
   }
 
   public boolean withdraw (double value) {

@@ -4,16 +4,20 @@ public class App {
         Account client2 = new Account();
 
         client.accounHolder = "Matheus Almeida";
-        client2.accounHolder = "Unknown";
         client.accountBalance = 200;
+
+        client2.accounHolder = "Unknown";
         client2.accountBalance = 1000;
 
         System.out.println("Client balance " + client.accountBalance);
-        
-        client.deposit(100);
-
-        System.out.println("Client balance " + client.accountBalance);
         System.out.println("Client2 balance " + client2.accountBalance);
+        
+        boolean depositSucceeded = client.deposit(100);
+
+        if (depositSucceeded) {
+          System.out.println("Deposit succeeded");
+          System.out.println("Client balance " + client.accountBalance);
+        }
 
         boolean isWithdrawalSuccessful = client.withdraw(50);
 
