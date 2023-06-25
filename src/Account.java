@@ -13,8 +13,18 @@ public class Account {
       this.accountBalance  -= value;
       
       return true;
-    } else {
-      return false;
     }
+
+    return false;
+  }
+
+  public boolean transfer (double value, Account designatedAccount) {
+    if (this.withdraw(value)) {
+      designatedAccount.deposit(value);
+
+      return true;
+    }
+
+    return false;
   }
 }
