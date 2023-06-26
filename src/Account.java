@@ -1,8 +1,12 @@
 public class Account {
-  double accountBalance;
+  private double accountBalance;
   Client accounHolder;
   int branch;
   int checkDigit;
+
+  public double getAccountBalance () {
+    return this.accountBalance;
+  }
 
   public boolean deposit (double value) {
     this.accountBalance += value;
