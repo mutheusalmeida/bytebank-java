@@ -1,8 +1,7 @@
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Account account = new Account();
-        Client client = new Client();
-        account.accounHolder = client;
+        account.accounHolder = new Client();
 
         account.accounHolder.name = "Matheus Almeida";
         account.accounHolder.id = "000.111.222-33";
