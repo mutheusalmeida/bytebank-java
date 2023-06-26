@@ -1,40 +1,30 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Account client = new Account();
-        Account client2 = new Account();
+        Account account = new Account();
+        Client client = new Client();
+        account.accounHolder = client;
 
-        client.accounHolder = "Matheus Almeida";
-        client.accountBalance = 200;
+        account.accounHolder.name = "Matheus Almeida";
+        account.accounHolder.id = "000.111.222-33";
+        account.accounHolder.profession = "Software Developer";
+        account.deposit(200);
 
-        client2.accounHolder = "Unknown";
-        client2.accountBalance = 1000;
-
-        System.out.println("Client balance " + client.accountBalance);
-        System.out.println("Client2 balance " + client2.accountBalance);
+        System.out.println(account.accounHolder.name + "'s balance is " + account.accountBalance);
         
-        boolean depositSucceeded = client.deposit(100);
-
+        boolean depositSucceeded = account.deposit(100);
+        
         if (depositSucceeded) {
           System.out.println("Deposit succeeded");
-          System.out.println("Client balance " + client.accountBalance);
+          System.out.println(account.accounHolder.name + "'s balance is " + account.accountBalance);
         }
-
-        boolean isWithdrawalSuccessful = client.withdraw(50);
-
+        
+        boolean isWithdrawalSuccessful = account.withdraw(50);
+        
         if (isWithdrawalSuccessful) {
           System.out.println("Withdrawal request successful");
-          System.out.println("Client balance " + client.accountBalance);
+          System.out.println(account.accounHolder.name + "'s balance is " + account.accountBalance);
         } else {
           System.out.println("Withdrawal request failed");
-        }
-
-        boolean isTransferSuccessful = client2.transfer(500, client);
-
-        if (isTransferSuccessful) {
-          System.out.println("Transfer successful");
-          System.out.println("Client2 balance " + client2.accountBalance);
-        } else {
-          System.out.println("Transfer failed");
         }
     }
 }
