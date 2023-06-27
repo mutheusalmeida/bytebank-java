@@ -1,19 +1,16 @@
 public class Account {
   private double accountBalance;
-  Client accounHolder;
-  int branch;
-  int checkDigit;
+  private Client accounHolder;
+  private int branch;
+  private int checkDigit;
 
-  public double getAccountBalance () {
-    return this.accountBalance;
-  }
-
+  
   public boolean deposit (double value) {
     this.accountBalance += value;
-
+    
     return true;
   }
-
+  
   public boolean withdraw (double value) {
     if (this.accountBalance >= value) {
       this.accountBalance  -= value;
@@ -32,5 +29,27 @@ public class Account {
     }
 
     return false;
+  }
+
+  // getters
+  public double getAccountBalance () {
+    return this.accountBalance;
+  }
+  
+  public Client getAccounHolder() {
+    return this.accounHolder;
+  }
+
+  public int getBranch() {
+    return this.branch;
+  }
+
+  public int getCheckDigit() {
+    return this.checkDigit;
+  }
+
+  // setters
+  public void setAccounHolder(Client accounHolder) {
+    this.accounHolder = accounHolder;
   }
 }
