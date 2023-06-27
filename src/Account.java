@@ -4,6 +4,11 @@ public class Account {
   private int branch;
   private int checkDigit;
 
+  public Account (Client client, int branch, int checkDigit) {
+    this.accountHolder = client;
+    this.branch = branch;
+    this.checkDigit = checkDigit;
+  }
   
   public boolean deposit (double value) {
     this.accountBalance += value;

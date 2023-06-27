@@ -1,7 +1,6 @@
 public class App {
     public static void main(String[] args) {
-        Account account = new Account();
-        account.setaccountHolder(new Client());
+        Account account = new Account(new Client(), 123, 4);
 
         account.getaccountHolder().setName("Matheus Almeida");
         account.getaccountHolder().setId("000.111.222-33");
