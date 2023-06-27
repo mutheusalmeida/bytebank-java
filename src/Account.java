@@ -3,8 +3,10 @@ public class Account {
   private Client accountHolder;
   private int branch;
   private int checkDigit;
+  private static int clientsTotal;
 
   public Account (Client client, int branch, int checkDigit) {
+    clientsTotal++;
     this.accountHolder = client;
     this.branch = branch;
     this.checkDigit = checkDigit;
@@ -51,6 +53,10 @@ public class Account {
 
   public int getCheckDigit() {
     return this.checkDigit;
+  }
+
+  public static int getClientsTotal() {
+    return clientsTotal;
   }
 
   // setters
