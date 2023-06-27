@@ -1,6 +1,6 @@
 public class Account {
   private double accountBalance;
-  private Client accounHolder;
+  private Client accountHolder;
   private int branch;
   private int checkDigit;
 
@@ -36,8 +36,8 @@ public class Account {
     return this.accountBalance;
   }
   
-  public Client getAccounHolder() {
-    return this.accounHolder;
+  public Client getaccountHolder() {
+    return this.accountHolder;
   }
 
   public int getBranch() {
@@ -49,7 +49,7 @@ public class Account {
   }
 
   // setters
-  public void setAccounHolder(Client accounHolder) {
-    this.accounHolder = accounHolder;
+  public void setaccountHolder(Client accountHolder) {
+    this.accountHolder = accountHolder;
   }
 }
