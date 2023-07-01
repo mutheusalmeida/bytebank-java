@@ -1,7 +1,7 @@
 public class Employee {
   private String name;
   private int id;
-  protected double compensation;
+  private double compensation;
 
   public Employee(String name, int id, double compensation) {
     this.name = name;
