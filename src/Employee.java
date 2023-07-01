@@ -21,4 +21,8 @@ public class Employee {
   public double getCompensation() {
     return this.compensation;
   }
+
+  public double getBonification() {
+    return this.compensation * 0.1;
+  }
 }
