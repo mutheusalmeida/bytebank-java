@@ -5,6 +5,7 @@ public class App {
 
         System.out.println(empployee.getName());
         System.out.println(empployee.getBonification());
+        System.out.println(empployee.compensation);
 
         System.out.println(manager.getName());
         System.out.println(manager.getBonification());

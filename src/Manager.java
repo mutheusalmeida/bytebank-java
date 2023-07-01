@@ -15,6 +15,6 @@ public class Manager extends Employee {
   }
 
   public double getBonification() {
-    return this.getCompensation() * 0.8;
+    return super.getCompensation() * 0.8;
   }
 }
