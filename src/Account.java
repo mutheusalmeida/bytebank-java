@@ -48,7 +48,7 @@ public class Account {
     return this.accountBalance;
   }
   
-  public Client getaccountHolder() {
+  public Client getAccountHolder() {
     return this.accountHolder;
   }
 
@@ -65,7 +65,7 @@ public class Account {
   }
 
   // setters
-  public void setaccountHolder(Client accountHolder) {
+  public void setAccountHolder(Client accountHolder) {
     this.accountHolder = accountHolder;
   }
 }
