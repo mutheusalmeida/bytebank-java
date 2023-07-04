@@ -1,4 +1,4 @@
-public class Employee {
+public abstract class Employee {
   private String name;
   private int id;
   private double compensation;
@@ -22,7 +22,5 @@ public class Employee {
     return this.compensation;
   }
 
-  public double getBonification() {
-    return this.compensation * 0.1;
-  }
+  public abstract double getBonification();
 }
