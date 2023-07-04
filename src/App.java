@@ -1,10 +1,12 @@
 public class App {
     public static void main(String[] args) {
-        CheckingAccount client = new CheckingAccount(new Client(),123, 4, 5000);
+        Manager manager = new Manager("Katrine", 1234567890, 6000, "1234");
+        Administrator administrator = new Administrator("Oswald", 1238468575, 10000, "4444");
 
-        client.deposit(300);
+        System.out.println(manager.getName());
+        System.out.println(manager.authentication("4432"));
 
-        client.getAccountHolder().setName("Matheu");
-        System.out.println(client.getAccountBalance());
+        System.out.println(administrator.getName());
+        System.out.println(administrator.authentication("4444"));
     }
 }

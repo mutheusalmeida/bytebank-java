@@ -1,17 +1,6 @@
-public class Manager extends Employee {
-  private String password;
-
+public class Manager extends AuthenticatedEmployee {
   public Manager(String name, int id, double compensation, String password) {
-    super(name, id, compensation);
-    this.password = password;
-  }
-
-  public boolean authentication(String password) {
-    if (password == this.password) {
-      return true;
-    } else {
-      return false;
-    }
+    super(name, id, compensation, password);
   }
 
   public double getBonification() {
