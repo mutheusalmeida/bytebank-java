@@ -4,9 +4,9 @@ public class App {
         Administrator administrator = new Administrator("Oswald", 1238468575, 10000, "4444");
 
         System.out.println(manager.getName());
-        System.out.println(manager.authentication("4432"));
+        System.out.println(manager.authenticate("4432"));
 
         System.out.println(administrator.getName());
-        System.out.println(administrator.authentication("4444"));
+        System.out.println(administrator.authenticate("4444"));
     }
 }
