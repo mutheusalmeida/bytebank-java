@@ -1,15 +1,15 @@
 public class Administrator extends Employee implements Authenticated {
-  private String password;
+  private Authenticator authenticator;
 
   public Administrator(String name, int id, double compensation, String password) {
     super(name, id, compensation);
-    this.password = password;
+    this.authenticator = new Authenticator(password);
   }
 
   // setters 
   @Override
   public void setPassword(String password) {
-    this.password = password;
+    this.authenticator.setPassword(password);
   }
 
   //getters
@@ -19,10 +19,6 @@ public class Administrator extends Employee implements Authenticated {
 
   @Override
   public String authenticate(String password) {
-    if (this.password == password) {
-      return "Login successful";
-    }
-
-    return "Login failed";
+    return this.authenticator.authenticate(password);
   }
 }
