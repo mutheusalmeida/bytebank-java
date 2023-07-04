@@ -1,4 +1,4 @@
-public class Account {
+public abstract class Account {
   private double accountBalance;
   private Client accountHolder;
   private int branch;
