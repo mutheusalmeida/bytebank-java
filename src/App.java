@@ -1,7 +1,10 @@
 public class App {
     public static void main(String[] args) {
-        Manager manager = new Manager("Bob", 1234567890, 5000, "1234");
+        CheckingAccount client = new CheckingAccount(new Client(),123, 4, 5000);
 
-        System.out.println(manager.getBonification());
+        client.deposit(300);
+
+        client.getAccountHolder().setName("Matheu");
+        System.out.println(client.getAccountBalance());
     }
 }

@@ -8,4 +8,10 @@ public class CheckingAccount extends Account {
 
     return super.withdraw(newValue);
   }
+
+  public boolean deposit(double value) {
+    super.accountBalance += (value - 10);
+    
+    return true;
+  }
 }

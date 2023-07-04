@@ -1,5 +1,5 @@
 public abstract class Account {
-  private double accountBalance;
+  protected double accountBalance;
   private Client accountHolder;
   private int branch;
   private int checkDigit;
@@ -17,11 +17,7 @@ public abstract class Account {
     this(client, branch, checkDigit, 500);
   }
   
-  public boolean deposit (double value) {
-    this.accountBalance += value;
-    
-    return true;
-  }
+  public abstract boolean deposit (double value);
   
   public boolean withdraw (double value) {
     if (this.accountBalance >= value) {
