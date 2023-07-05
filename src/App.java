@@ -1,12 +1,8 @@
 public class App {
     public static void main(String[] args) {
-        Manager manager = new Manager("Katrine", 1234567890, 6000, "1234");
-        Administrator administrator = new Administrator("Oswald", 1238468575, 10000, "4444");
+        CheckingAccount client = new CheckingAccount(new Client(), 123, 4, 4000);
 
-        System.out.println(manager.getName());
-        System.out.println(manager.authenticate("4432"));
-
-        System.out.println(administrator.getName());
-        System.out.println(administrator.authenticate("4444"));
+        client.calculateTax();
+        System.out.println(client.getTax());
     }
 }
