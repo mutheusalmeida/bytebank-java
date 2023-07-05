@@ -1,17 +1,13 @@
 public class TaxCalculator {
-  private double tax;
-  private double accountBalance;
+  private double totalTax;
 
-  public TaxCalculator(double accountBalance) {
-    this.accountBalance = accountBalance;
+  public double getTotalTax() {
+    return this.totalTax;
   }
 
-  public double getTax() {
-    return this.tax;
-  }
+  public void registerTaxable(Taxable taxable) {
+    double tax = taxable.getTax();
 
-
-  public void calculateTax() {
-    this.tax = this.accountBalance * 0.2;
+    this.totalTax += tax;
   }
 }

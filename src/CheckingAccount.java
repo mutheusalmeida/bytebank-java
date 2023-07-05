@@ -1,9 +1,6 @@
 public class CheckingAccount extends Account implements Taxable {
-  private TaxCalculator tax;
-
   public CheckingAccount(Client client, int branch, int checkDigit, double accountBalance) {
     super(client, branch, checkDigit, accountBalance);
-    this.tax = new TaxCalculator(accountBalance);
   }
 
   public boolean withdraw(double value) {
@@ -18,13 +15,7 @@ public class CheckingAccount extends Account implements Taxable {
     return true;
   }
 
-  @Override
   public double getTax() {
-    return this.tax.getTax();
-  }
-
-  @Override
-  public void calculateTax() {
-    this.tax.calculateTax();
+    return super.getAccountBalance() * 0.15;
   }
 }
