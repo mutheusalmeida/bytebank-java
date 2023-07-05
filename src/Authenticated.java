@@ -1,5 +1,5 @@
-public abstract interface Authenticated {
-  public abstract void setPassword(String password);
+public interface Authenticated {
+  void setPassword(String password);
 
-  public abstract String authenticate(String password);
+  String authenticate(String password);
 }

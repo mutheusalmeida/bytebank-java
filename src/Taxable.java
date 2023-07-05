@@ -1,5 +1,5 @@
 public interface Taxable {
-  public double getTax();
+  double getTax();
 
-  public void calculateTax();
+  void calculateTax();
 }
