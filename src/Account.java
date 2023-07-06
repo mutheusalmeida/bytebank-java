@@ -26,7 +26,7 @@ public abstract class Account {
       return true;
     }
 
-    return false;
+    throw new InsufficientBalanceException("You do not have sufficient funds");
   }
 
   public boolean transfer (double value, Account designatedAccount) {
