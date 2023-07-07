@@ -3,7 +3,7 @@ public class CheckingAccount extends Account implements Taxable {
     super(client, branch, checkDigit, accountBalance);
   }
 
-  public boolean withdraw(double value) {
+  public boolean withdraw(double value) throws InsufficientBalanceException {
     double newValue = value + (value * 0.015);
 
     return super.withdraw(newValue);

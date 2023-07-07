@@ -19,7 +19,7 @@ public abstract class Account {
   
   public abstract boolean deposit (double value);
   
-  public boolean withdraw (double value) {
+  public boolean withdraw (double value) throws InsufficientBalanceException {
     if (this.accountBalance >= value) {
       this.accountBalance  -= value;
       
@@ -29,7 +29,7 @@ public abstract class Account {
     throw new InsufficientBalanceException("You do not have sufficient funds");
   }
 
-  public boolean transfer (double value, Account designatedAccount) {
+  public boolean transfer (double value, Account designatedAccount) throws InsufficientBalanceException {
     if (this.withdraw(value)) {
       designatedAccount.deposit(value);
 
