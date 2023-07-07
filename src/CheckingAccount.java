@@ -3,10 +3,10 @@ public class CheckingAccount extends Account implements Taxable {
     super(client, branch, checkDigit, accountBalance);
   }
 
-  public boolean withdraw(double value) {
+  public void withdraw(double value) {
     double newValue = value + (value * 0.015);
 
-    return super.withdraw(newValue);
+    super.withdraw(newValue);
   }
 
   public boolean deposit(double value) {

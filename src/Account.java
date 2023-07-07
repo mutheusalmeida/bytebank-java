@@ -19,30 +19,23 @@ public abstract class Account {
   
   public abstract boolean deposit (double value);
   
-  public boolean withdraw (double value) {
+  public void withdraw (double value) {
     try {
       if (this.accountBalance >= value) {
         this.accountBalance  -= value;
-        
-        return true;
-      }
 
-      throw new InsufficientBalanceException("You do not have sufficient funds");
+        System.out.println("Success");
+      } else {
+        throw new InsufficientBalanceException("You do not have sufficient funds");
+      }
     } catch(InsufficientBalanceException ex) {
       System.out.println(ex.getMessage());
-
-      return false;
     }
   }
 
-  public boolean transfer (double value, Account designatedAccount) {
-    if (this.withdraw(value)) {
-      designatedAccount.deposit(value);
-
-      return true;
-    }
-
-    return false;
+  public void transfer (double value, Account designatedAccount) {
+    this.withdraw(value);
+    designatedAccount.deposit(value);
   }
 
   // getters
