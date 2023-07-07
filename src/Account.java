@@ -21,13 +21,12 @@ public abstract class Account {
   
   public void withdraw (double value) {
     try {
-      if (this.accountBalance >= value) {
-        this.accountBalance  -= value;
-
-        System.out.println("Success");
-      } else {
+      if (this.accountBalance < value) {
         throw new InsufficientBalanceException("You do not have sufficient funds");
       }
+      
+      this.accountBalance  -= value;
+      System.out.println("Success");
     } catch(InsufficientBalanceException ex) {
       System.out.println(ex.getMessage());
     }
