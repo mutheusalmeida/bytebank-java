@@ -4,11 +4,7 @@ public class App {
         TaxCalculator taxCalculator = new TaxCalculator();
         taxCalculator.registerTaxable(client);
         
-        try {
-          client.withdraw(5000);
-        } catch(InsufficientBalanceException ex) {
-          System.err.println(ex.getMessage());
-        }
+        client.withdraw(5000);
 
         System.out.println(taxCalculator.getTotalTax());
     }
