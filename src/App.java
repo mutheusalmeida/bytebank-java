@@ -9,5 +9,13 @@ public class App {
         client.transfer(300, client2);
 
         System.out.println(taxCalculator.getTotalTax());
+
+        try {
+          Connection connection = new Connection();
+          connection.getData();
+          connection.close();
+        } catch (Exception ex) {
+          System.out.println(ex);
+        }
     }
 }
