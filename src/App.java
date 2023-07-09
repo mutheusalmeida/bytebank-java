@@ -10,12 +10,15 @@ public class App {
 
         System.out.println(taxCalculator.getTotalTax());
 
+        Connection connection = null;
         try {
-          Connection connection = new Connection();
+          connection = new Connection();
           connection.getData();
           connection.close();
         } catch (Exception ex) {
           System.out.println(ex);
+        } finally {
+          connection.close();
         }
     }
 }

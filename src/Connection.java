@@ -5,6 +5,7 @@ public class Connection {
 
   public void getData() {
     System.out.println("Getting data...");
+    throw new RuntimeException("Error");
   }
   
   public void close() {
