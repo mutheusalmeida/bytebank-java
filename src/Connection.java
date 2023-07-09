@@ -1,14 +1,15 @@
-public class Connection {
+public class Connection implements AutoCloseable {
   public Connection() {
     System.out.println("Opening connection...");
   }
-
+  
   public void getData() {
     System.out.println("Getting data...");
-    throw new RuntimeException("Error");
+    throw new RuntimeException("Error getting data");
   }
-  
+
+  @Override
   public void close() {
-    System.out.println("Connection closed");
+      System.out.println("Connection closed");
   }
 }
