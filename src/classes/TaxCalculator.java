@@ -1,3 +1,6 @@
+package classes;
+import interfaces.Taxable;
+
 public class TaxCalculator {
   private double totalTax;
 

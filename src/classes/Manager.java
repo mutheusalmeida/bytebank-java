@@ -1,3 +1,6 @@
+package classes;
+import interfaces.Authenticated;
+
 public class Manager extends Employee implements Authenticated {
   private Authenticator authenticator;
 

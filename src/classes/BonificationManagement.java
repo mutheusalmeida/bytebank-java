@@ -1,3 +1,5 @@
+package classes;
+
 public class BonificationManagement {
   private double total;
 

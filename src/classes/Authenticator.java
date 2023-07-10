@@ -1,3 +1,5 @@
+package classes;
+
 public class Authenticator {
   private String password;
 

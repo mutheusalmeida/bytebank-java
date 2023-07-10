@@ -1,3 +1,6 @@
+package classes;
+import exceptions.InsufficientBalanceException;
+
 public abstract class Account {
   protected double accountBalance;
   private Client accountHolder;

@@ -1,3 +1,8 @@
+import classes.CheckingAccount;
+import classes.Client;
+import classes.Connection;
+import classes.TaxCalculator;
+
 public class App {
     public static void main(String[] args) {
         CheckingAccount client = new CheckingAccount(new Client(), 123, 4, 4000);

@@ -1,3 +1,6 @@
+package classes;
+import interfaces.Taxable;
+
 public class CheckingAccount extends Account implements Taxable {
   public CheckingAccount(Client client, int branch, int checkDigit, double accountBalance) {
     super(client, branch, checkDigit, accountBalance);
