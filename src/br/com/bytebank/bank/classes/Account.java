@@ -2,6 +2,12 @@ package br.com.bytebank.bank.classes;
 
 import br.com.bytebank.bank.exceptions.InsufficientBalanceException;
 
+/**
+ * Account abstract class. Should be extended.
+ * 
+ * @author Matheus Almeida
+ * @version 1.0.1
+ */
 public abstract class Account {
   protected double accountBalance;
   private Client accountHolder;
@@ -9,6 +15,14 @@ public abstract class Account {
   private int checkDigit;
   private static int clientsTotal;
 
+  /**
+   * Account constructor expects a instantiated Client, a branch, checkDigit, and accountBalance.
+   * 
+   * @param client
+   * @param branch
+   * @param checkDigit
+   * @param accountBalance
+   */
   public Account (Client client, int branch, int checkDigit, double accountBalance) {
     clientsTotal++;
     this.accountHolder = client;
@@ -17,6 +31,13 @@ public abstract class Account {
     this.accountBalance = accountBalance;
   }
 
+  /**
+   * Account constructor without a required accountBalance.
+   * 
+   * @param client
+   * @param branch
+   * @param checkDigit
+   */
   public Account (Client client, int branch, int checkDigit) {
     this(client, branch, checkDigit, 500);
   }
@@ -63,6 +84,12 @@ public abstract class Account {
   }
 
   // setters
+
+  /**
+   * Set account holder.
+   * 
+   * @param accountHolder
+   */
   public void setAccountHolder(Client accountHolder) {
     this.accountHolder = accountHolder;
   }
