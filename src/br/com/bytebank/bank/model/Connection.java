@@ -7,7 +7,6 @@ public class Connection implements AutoCloseable {
 
     public void getData() {
         System.out.println("Getting data...");
-        throw new RuntimeException("Error getting data");
     }
 
     @Override
