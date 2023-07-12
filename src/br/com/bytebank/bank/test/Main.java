@@ -1,9 +1,6 @@
 package br.com.bytebank.bank.test;
 
-import br.com.bytebank.bank.model.CheckingAccount;
-import br.com.bytebank.bank.model.Client;
-import br.com.bytebank.bank.model.Connection;
-import br.com.bytebank.bank.model.TaxCalculator;
+import br.com.bytebank.bank.model.*;
 
 public class Main {
     public static void main(String[] args) {
