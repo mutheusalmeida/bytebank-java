@@ -10,4 +10,9 @@ public class SavingAccount extends Account {
 
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Saving account: " + super.toString();
+    }
 }

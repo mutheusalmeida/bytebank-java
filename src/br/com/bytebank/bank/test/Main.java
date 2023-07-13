@@ -6,16 +6,11 @@ public class Main {
     public static void main(String[] args) {
         CheckingAccount client = new CheckingAccount(new Client(), 123, 4, 4000);
         client.getAccountHolder().setName("Matheus");
-        StringBuilder fullName = new StringBuilder(client.getAccountHolder().getName());
 
-        System.out.println(client.getAccountHolder().getName());
+        SavingAccount client2 = new SavingAccount(new Client(), 144, 5, 2000);
+        client2.getAccountHolder().setName("Bob");
 
-        fullName.append(" Almeida");
-        fullName.append(" de");
-        fullName.append(" Souza");
-
-        client.getAccountHolder().setName(fullName.toString());
-
-        System.out.println(client.getAccountHolder().getName());
+        System.out.println(client);
+        System.out.println(client2);
     }
 }

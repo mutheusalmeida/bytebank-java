@@ -62,4 +62,9 @@ public abstract class Account {
     public void setAccountHolder(Client accountHolder) {
         this.accountHolder = accountHolder;
     }
+
+    @Override
+    public String toString() {
+        return this.getBranch() + ", " + this.getAccountHolder().getName();
+    }
 }

@@ -20,4 +20,9 @@ public class CheckingAccount extends Account implements Taxable {
     public double getTax() {
         return super.getAccountBalance() * 0.15;
     }
+
+    @Override
+    public String toString() {
+        return "Checking account: " + super.toString();
+    }
 }
