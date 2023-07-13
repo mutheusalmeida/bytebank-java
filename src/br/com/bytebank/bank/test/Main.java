@@ -5,19 +5,17 @@ import br.com.bytebank.bank.model.*;
 public class Main {
     public static void main(String[] args) {
         CheckingAccount client = new CheckingAccount(new Client(), 123, 4, 4000);
-        CheckingAccount client2 = new CheckingAccount(new Client(), 786, 9, 1000);
-        TaxCalculator taxCalculator = new TaxCalculator();
-        taxCalculator.registerTaxable(client);
+        client.getAccountHolder().setName("Matheus");
+        StringBuilder fullName = new StringBuilder(client.getAccountHolder().getName());
 
-        client.withdraw(3900);
-        client.transfer(300, client2);
+        System.out.println(client.getAccountHolder().getName());
 
-        System.out.println(taxCalculator.getTotalTax());
+        fullName.append(" Almeida");
+        fullName.append(" de");
+        fullName.append(" Souza");
 
-        try (Connection connection = new Connection()) {
-            connection.getData();
-        } catch (IllegalStateException ex) {
-            System.out.println(ex);
-        }
+        client.getAccountHolder().setName(fullName.toString());
+
+        System.out.println(client.getAccountHolder().getName());
     }
 }
