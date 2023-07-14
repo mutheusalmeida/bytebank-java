@@ -15,5 +15,9 @@ public class Main {
         CheckingAccount account = (CheckingAccount) accounts[0];
 
         System.out.println(account);
+
+        for (int i = 0; i < args.length; i++) {
+            System.out.println(args[i]);
+        }
     }
 }
