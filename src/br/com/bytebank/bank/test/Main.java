@@ -12,6 +12,8 @@ public class Main {
 
         Account[] accounts = {client, client2};
 
-        System.out.println(accounts[1]);
+        CheckingAccount account = (CheckingAccount) accounts[0];
+
+        System.out.println(account);
     }
 }
