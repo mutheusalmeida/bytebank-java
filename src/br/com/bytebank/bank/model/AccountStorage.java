@@ -1,16 +1,16 @@
 package br.com.bytebank.bank.model;
 
 public class AccountStorage {
-    private Account[] accounts;
+    private Object[] object;
     private int position;
 
     public AccountStorage(int length) {
-        this.accounts = new Account[length];
+        this.object = new Object[length];
         this.position = 0;
     }
 
-    public void addAccount(Account account) {
-        this.accounts[position] = account;
+    public void addAccount(Object object) {
+        this.object[position] = object;
         this.position++;
     }
 
@@ -18,7 +18,7 @@ public class AccountStorage {
         return this.position;
     }
 
-    public Account getAccount(int position) {
-        return this.accounts[position];
+    public Object getAccount(int position) {
+        return this.object[position];
     }
 }
