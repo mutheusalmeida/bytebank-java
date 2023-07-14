@@ -10,11 +10,8 @@ public class Main {
         SavingAccount client2 = new SavingAccount(new Client(), 144, 5, 2000);
         client2.getAccountHolder().setName("Bob");
 
-        Account[] accounts = new Account[3];
+        Account[] accounts = {client, client2};
 
-        accounts[0] = client;
-        accounts[1] = client2;
-
-        System.out.println(accounts[0]);
+        System.out.println(accounts[1]);
     }
 }
