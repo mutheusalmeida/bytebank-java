@@ -10,14 +10,16 @@ public class Main {
         SavingAccount client2 = new SavingAccount(new Client(), 144, 5, 2000);
         client2.getAccountHolder().setName("Bob");
 
-        Account[] accounts = {client, client2};
+        AccountStorage accountStorage = new AccountStorage(10);
 
-        CheckingAccount account = (CheckingAccount) accounts[0];
+        accountStorage.addAccount(client);
 
-        System.out.println(account);
+        System.out.println(accountStorage.getLength());
 
-        for (String arg : args) {
-            System.out.println(arg);
-        }
+        accountStorage.addAccount(client2);
+
+        System.out.println(accountStorage.getLength());
+
+        System.out.println(accountStorage.getAccount(1));
     }
 }
