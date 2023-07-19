@@ -12,28 +12,13 @@ public class Main {
         SavingAccount client2 = new SavingAccount(new Client(), 144, 5, 2000);
         client2.getAccountHolder().setName("Bob");
 
-        ArrayList AccountStorage = new ArrayList();
+        ArrayList<Account> AccountStorage = new ArrayList<>();
 
         AccountStorage.add(client);
         AccountStorage.add(client2);
 
-        System.out.println(AccountStorage.size());
-        System.out.println(AccountStorage.get(1));
-
-        AccountStorage.remove(1);
-
-        System.out.println(AccountStorage.size());
-
-        AccountStorage.add(client2);
-
-        CheckingAccount acc = (CheckingAccount) AccountStorage.get(0);
-
-        System.out.println(acc);
-
-        System.out.println("---------------");
-
-        for (Object clientAcc : AccountStorage) {
-            System.out.println(clientAcc);
+        for (Account account : AccountStorage) {
+            System.out.println(account);
         }
     }
 }
