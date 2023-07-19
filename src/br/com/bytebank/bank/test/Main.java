@@ -12,7 +12,7 @@ public class Main {
         SavingAccount client2 = new SavingAccount(new Client(), 144, 5, 2000);
         client2.getAccountHolder().setName("Bob");
 
-        ArrayList<Account> AccountStorage = new ArrayList<>();
+        ArrayList<Account> AccountStorage = new ArrayList<>(10);
 
         AccountStorage.add(client);
         AccountStorage.add(client2);
