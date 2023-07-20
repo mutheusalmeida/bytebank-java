@@ -67,4 +67,15 @@ public abstract class Account {
     public String toString() {
         return this.getBranch() + ", " + this.getAccountHolder().getName();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Account ref = (Account) obj;
+
+        if (ref.getAccountHolder().getId() != this.getAccountHolder().getId()) {
+            return false;
+        }
+
+        return true;
+    }
 }
