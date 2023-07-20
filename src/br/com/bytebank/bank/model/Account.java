@@ -72,7 +72,7 @@ public abstract class Account {
     public boolean equals(Object obj) {
         Account ref = (Account) obj;
 
-        if (ref.getAccountHolder().getId() != this.getAccountHolder().getId()) {
+        if (ref.getAccountHolder().getId() != this.getAccountHolder().getId() && ref.branch != this.branch && ref.checkDigit != this.checkDigit) {
             return false;
         }
 
