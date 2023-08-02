@@ -8,30 +8,37 @@ import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
-        Integer age = 24;
-        int primitive = new Integer(27);
+        Account acc1 = new CheckingAccount(new Client("123.123.123-14"), 123, 1, 2000);
+        acc1.getAccountHolder().setName("Bob");
 
-        List<Integer> list = new ArrayList<>();
+        Account acc2 = new CheckingAccount(new Client("254.683.973-01"), 936, 7, 5000);
+        acc2.getAccountHolder().setName("Ryan");
 
-        list.add(age);
-        list.add(primitive);
+        Account acc3 = new CheckingAccount(new Client("018.865.320-24"), 255, 2, 1000);
+        acc3.getAccountHolder().setName("Jeff");
 
-        int item1 = list.get(0);
-        Integer item2 = list.get(1);
+        Account acc4 = new CheckingAccount(new Client("152.402.183-40"), 102, 8, 9000);
+        acc4.getAccountHolder().setName("Smith");
 
-        System.out.println(item1);
-        System.out.println(item2);
+        List<Account> list = new ArrayList<>();
 
-        Integer valueReference = Integer.valueOf(24);
-        int valuePrimitive = valueReference.intValue();
+        list.add(acc1);
+        list.add(acc2);
+        list.add(acc3);
+        list.add(acc4);
 
-        Integer parsingReference = Integer.valueOf("90");
-        int parsingPrimitive = Integer.parseInt("20");
+        for (Account account : list) {
+            System.out.println(account);
+        }
 
-        System.out.println(valuePrimitive);
+        CompareByAccountNumber comparator = new CompareByAccountNumber();
 
-        System.out.println(Integer.MAX_VALUE);
-        System.out.println(Integer.SIZE);
-        System.out.println(Integer.BYTES);
+        list.sort(comparator);
+
+        System.out.println("----------");
+
+        for (Account account : list) {
+            System.out.println((account));
+        }
     }
 }
