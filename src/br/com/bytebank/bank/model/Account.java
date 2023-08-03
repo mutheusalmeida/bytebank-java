@@ -1,6 +1,8 @@
 package br.com.bytebank.bank.model;
 
-public abstract class Account {
+import java.util.Comparator;
+
+public abstract class Account implements Comparable<Account> {
     protected double accountBalance;
     private Client accountHolder;
     private int branch;
@@ -65,7 +67,7 @@ public abstract class Account {
 
     @Override
     public String toString() {
-        return this.getBranch() + ", " + this.getAccountHolder().getName();
+        return this.getBranch() + ", " + this.getAccountHolder().getName() + ", " + this.getAccountBalance();
     }
 
     @Override

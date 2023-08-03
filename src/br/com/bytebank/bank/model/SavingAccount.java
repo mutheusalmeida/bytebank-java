@@ -15,4 +15,9 @@ public class SavingAccount extends Account {
     public String toString() {
         return "Saving account: " + super.toString();
     }
+
+    @Override
+    public int compareTo(Account account) {
+        return Double.compare(this.getAccountBalance(), account.getAccountBalance());
+    }
 }

@@ -32,9 +32,7 @@ public class Main {
             System.out.println(account);
         }
 
-        CompareByName comparator = new CompareByName();
-
-        Collections.sort(list, comparator);
+        Collections.sort(list);
 
         System.out.println("----------");
 
