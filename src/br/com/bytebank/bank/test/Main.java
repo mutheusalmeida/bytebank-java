@@ -3,6 +3,7 @@ package br.com.bytebank.bank.test;
 import br.com.bytebank.bank.model.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
 
@@ -31,9 +32,9 @@ public class Main {
             System.out.println(account);
         }
 
-        CompareByAccountNumber comparator = new CompareByAccountNumber();
+        CompareByName comparator = new CompareByName();
 
-        list.sort(comparator);
+        Collections.sort(list, comparator);
 
         System.out.println("----------");
 
