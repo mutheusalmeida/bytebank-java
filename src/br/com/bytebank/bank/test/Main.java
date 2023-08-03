@@ -25,25 +25,25 @@ public class Main {
         list.add(acc3);
         list.add(acc4);
 
-        for (Account account : list) {
-            System.out.println(account);
-        }
-
-        Collections.sort(list, new Comparator<Account>() {
-
-            @Override
-            public int compare(Account acc1, Account acc2) {
-                String name1 = acc1.getAccountHolder().getName();
-                String name2 = acc2.getAccountHolder().getName();
-
-                return name1.compareTo(name2);
-            }
-        });
+        list.forEach((item) -> System.out.println(item));
 
         System.out.println("Sorted by name:");
 
-        for (Account account : list) {
-            System.out.println((account));
-        }
+        list.sort((item1, item2) -> {
+           String name1 = item1.getAccountHolder().getName();
+           String name2 = item2.getAccountHolder().getName();
+
+           return name1.compareTo(name2);
+        });
+
+        list.forEach((item) -> System.out.println(item));
+
+        System.out.println("Sorted by account balance:");
+
+        Comparator<Account> comparator = (account1, account2) -> Double.compare(account1.getAccountBalance(), account2.getAccountBalance());
+
+        Collections.sort(list, comparator);
+
+        list.forEach((item) -> System.out.println(item));
     }
 }
