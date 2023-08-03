@@ -2,10 +2,7 @@ package br.com.bytebank.bank.test;
 
 import br.com.bytebank.bank.model.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +12,7 @@ public class Main {
         Account acc2 = new CheckingAccount(new Client("254.683.973-01"), 936, 7, 5000);
         acc2.getAccountHolder().setName("Ryan");
 
-        Account acc3 = new CheckingAccount(new Client("018.865.320-24"), 255, 2, 1000);
+        Account acc3 = new CheckingAccount(new Client("018.865.320-24"), 255, 2, 70000);
         acc3.getAccountHolder().setName("Jeff");
 
         Account acc4 = new CheckingAccount(new Client("152.402.183-40"), 102, 8, 9000);
@@ -32,9 +29,18 @@ public class Main {
             System.out.println(account);
         }
 
-        Collections.sort(list);
+        Collections.sort(list, new Comparator<Account>() {
 
-        System.out.println("----------");
+            @Override
+            public int compare(Account acc1, Account acc2) {
+                String name1 = acc1.getAccountHolder().getName();
+                String name2 = acc2.getAccountHolder().getName();
+
+                return name1.compareTo(name2);
+            }
+        });
+
+        System.out.println("Sorted by name:");
 
         for (Account account : list) {
             System.out.println((account));
